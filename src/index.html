@@ -3,15 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 <body>
-    <h1>hello</h1>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    <h2>hello</h2>
-    <h3>hello</h3>
+    <header >
+        <nav class="bg-red-950 border-gray-200 dark:bg-red-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../image/cinema.png" class="h-12" alt="cinema Logo" />
+               
+            </a>
+            <div class="flex md:order-2">
+                <!-- navbar -->
+                <div class="relative mt-3 md:hidden">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+                    </div>
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0 md:dark:text-blue-500 md:hover:text-blue-700" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Now Playing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Watchlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Categary</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign Out</a>
+                    </li>
+                    </ul>
+                </div>
+                
+
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-stone-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+                </div>
+                <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+                </div>
+                <!-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                  
+                </div> -->
+            </nav>
+        </header>
+
+       
+     <main>
+     <section>
+        <div class="flex   bg-black pl-32 ">
+             <!-- Avatar 1 -->
+            <div class="flex m-4">
+              <img
+                src="../image/photo_2025-01-14_10-26-51.jpg"
+                class="w-52 h-52 rounded-full"
+              />
+              <div class=" mt-12 mx-4">
+                <span class="block text-white text-2xl font-medium px-4 mx-4">Moshi Moshi</span>
+                <span class="block text-white text-xs  ">
+                  <i class="fa-solid fa-calendar-days mx-8 my-4"></i>Joined Jan 2025</span>
+                  <button class="rounded-md bg-red-700 text-white p-2 mx-8">Edit Profile</button>
+              </div>
+              <div>
+                <div class="  pl-96 mt-4 justify-between">
+                   
+                     <button class="inline-block rounded-md bg-stone-500 px-6 ml-60 text-sm font-medium text-white hover:text-black-600 focus:outline-none focus:ring active:bg-indigo-500 "
+                     >Rating <br>0</button>
+                     
+
+                    <button class="inline-block rounded-md bg-stone-500 px-5 my-8  text-sm font-medium text-white  hover:text-black-600 focus:outline-none focus:ring active:bg-indigo-500"
+                    >Watching<br >0</button>
+                  </div>
+                  <div class="pl-96">
+                    <!-- Base -->
+                     <button class="inline-block rounded-md bg-stone-500 px-8 ml-60 text-sm font-medium text-white  hover:text-black-600 focus:outline-none focus:ring active:bg-indigo-500"
+                     >Lists<br>0</button>
+                    <!-- Border -->
+
+                    <button class="inline-block rounded-md bg-stone-500 px-8 text-sm font-medium text-white hover:text-black-600 focus:outline-none focus:ring active:bg-indigo-500"
+                    href="#">More <br>...</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div> 
+
+           </div> 
+    </section>
+     <section >
+
+        <div class="bg-red-900">
+            <button class="mx-40 my-8 px-12 pr-12  bg-black text-white ">
+                <div class="flex justify-between">
+                    <div class=" pl-8 pt-12 ">
+                        <i class="fa-solid fa-circle-exclamation pt-1"></i>
+                        <span class="px-2 ">Welcome to your mew profile</span>
+                    </div>
+                    <div class="pt-4 ">
+                        <i class="fa-sharp-duotone fa-solid fa-pipe"></i>
+                        <p>check-ins</p>
+                        <p>your check-ins are private.Edit.</p>
+                    </div>
+                </div>
+               <div>
+                <p class="pl-8 pb-8"> We're still working on updating some profile features. To see badges, ratings breakdowns, and polls, please go to the previous version of your profile.</p>
+               </div>
+            </button>
+            <div>
+            <div class="flex justify-between px-40">
+                <div class="  text-white ">
+                    <i class="fa-sharp-duotone fa-solid fa-pipe"></i>
+                    <p>check-ins</p>
+                    <p class="ml-4">your check-ins are private.Edit.</p>
+                </div>
+                <div >
+                    <p class="text-white" >No Check-ins yet</p>
+                </div>
+            </div>
+            <div class="ml-96 py-8">
+                <p class="text-white ">
+                    No Rating yet
+                </p>
+                <button class="bg-orange-600 text-white rounded-xl py-2 px-4 my-2">browse a movie</button>
+                
+            </div>
+            <div>
+                <div class=" px-40">
+                    <div class="  text-white ">
+                        <i class="fa-sharp-duotone fa-solid fa-pipe"></i>
+                        <p>Watchlist</p>
+                        <p class="ml-4">your check-ins are private.Edit.</p>
+                    </div>
+                </div>
+                <div class=" mt-8 text-white py-8">
+                    <p class="ml-96">
+                        No Watching yet
+                    </p>
+                    <p class="ml-52">Create a watchlist to track movies and shows you want to watch</p>
+                    <button class="bg-orange-600  rounded-xl py-2 px-4 my-2 ml-96">browse a movie</button>
+                    
+                </div>
+                <div>
+                    <div class=" px-40 text-white">
+                        <div >
+                            <i class="fa-sharp-duotone fa-solid fa-pipe"></i>
+                            <p>Lists</p>
+                            <p class="ml-4">your check-ins are private.Edit.</p>
+                        </div>
+                       
+                    </div>
+                    <div class="ml-96 mt-8 py-8">
+                        <p class="text-white ">
+                            No Lists yet
+                        </p>
+                        <button class="bg-orange-600 text-white rounded-xl py-2 px-8 my-2">Create One</button>
+                        
+                    </div>
+                    <div>
+                        <div class=" px-40">
+                            <div class="  text-white ">
+                                <i class="fa-sharp-duotone fa-solid fa-pipe"></i>
+                                <p>Reviews</p>
+                                <p class="ml-4">your check-ins are private.Edit.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="ml-96 mt-8 pb-8 py-8">
+                            <p class="text-white ">
+                                No Review yet
+                            </p>
+                        </div>
+        </div>
+   
+    </section> 
+    
+    
+    
+       
+    
+</main>
+        <footer class="px-4 divide-y bg-[#4A0909]  text-gray-100 ">
+            <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+                <div class="lg:w-1/3">
+                    <a rel="noopener noreferrer" href="#" class="flex flex-col p-[20px]  mr-[20px] justify-center space-x-3 lg:justify-start ">
+                            <img src="../image/cinema.png" class="flex-shrink-0 w-[100px] h-[100px]" alt="">
+                            <span>Clarity gives you the blocks and components you need to create a truly professional website.</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 sm:text-center lg:text-left ">
+                    <div class="space-y-3">
+                        <h3 class="tracking-wide uppercase text-white text-[18px] Roboto">Company</h3>
+                        <ul class="space-y-4">
+                            <li class="my-[10px]">
+                                <a rel="noopener noreferrer " href="#">About</a>
+                            </li>
+                            <li class="my-[10px]">
+                                <a rel="noopener noreferrer" href="#">Features</a>
+                            </li>
+                            <li class="my-[10px]">
+                                <a rel="noopener noreferrer" href="#">Works</a>
+                            </li>
+                            <li class="my-[10px]">
+                                <a rel="noopener noreferrer" href="#">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="tracking-wide uppercase text-white text-[18px] Roboto">Help</h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <a rel="noopener noreferrer" href="#">Customer Support</a>
+                            </li>
+                            <li>
+                                <a rel="noopener noreferrer" href="#">Delivery Details</a>
+                            </li>
+                            <li>
+                                <a rel="noopener noreferrer" href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a rel="noopener noreferrer" href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="uppercase text-white text-[18px] Roboto lg:text-left sm:text-center">Newsletter</h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <button class="bg-white text-black px-[15px] py-[10px] rounded-[10px]  mt-[10px]">Enter your email address</button>
+                            </li>
+                            <li>
+                                <button class="bg-white text-black px-[45px] py-[10px] rounded-[10px]   ">Subscribe Now</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 text-[14px] text-center text-white ">&copy; Copyright 2025. All Rights Reserved by  Cineverse</div>
+        </footer>
+
+
+
+
 </body>
 </html>
