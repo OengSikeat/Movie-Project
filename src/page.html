@@ -4,168 +4,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ceneverse</title>
+    <link rel="shortcun icon" href="../image/cinema.png">
+    
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+        }
+    </style>
+
 </head>
 
-<body class="bg-rose-950 pt-16">
-    <!-- nav section -->
-    <section>
-        <header>
-            <nav
-                class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                    </a>
-                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
-                            started</button>
-                        <button data-collapse-toggle="navbar-sticky" type="button"
-                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                            aria-controls="navbar-sticky" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 17 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-                        id="navbar-sticky">
-                        <ul
-                            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                                    aria-current="page">Home</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    </section>
-    <!-- banner section -->
-    <section class="banner_section">
-        <div class="banner-main max-w-screen-xl mx-auto my-8 px-4">
-            <img src="../asset/banner.jpg" alt="Banner" class="w-full h-auto  shadow-lg" />
-        </div>
-    </section>
-    <!-- about movie -->
-    <section>
-        <div class="about-movie max-w-screen-xl mx-auto my-8 px-4 ">
-            <div class="flex bg-rose-950 text-white ">
-                <!-- Movie Poster -->
-                <div class="w-1/3">
-                    <img src="../asset/jonh.webp" alt="John Wick: Chapter 4 Poster" class="w-full h-auto rounded-lg">
-                </div>
-
-                <!-- Movie Details -->
-                <div class="w-2/3 p-6 pl-40">
-                    <!-- Title -->
-                    <h1 class="text-4xl font-bold mb-4 ">John Wick: Chapter 4</h1>
-
-                    <!-- Tags -->
-                    <div class="flex space-x-2 mb-4 mt-16">
-                        <span class="bg-red-700 px-3 py-1 text-xl rounded-lg">Action</span>
-                        <span class="bg-red-700 px-3 py-1 text-xl rounded-lg">Crime</span>
-                        <span class="bg-red-700 px-3 py-1 text-xl rounded-lg">2023</span>
-                        <span class="bg-red-700 px-3 py-1 text-xl rounded-lg">2h:49mn</span>
-                    </div>
-
-                    <!-- Description -->
-                    <p class="text-1lg mb-6 mt-8">
-                        With the price on his head ever increasing, John Wick uncovers a path to defeating
-                        The High Table. But before he can earn his freedom, Wick must face off against a
-                        new enemy with powerful alliances across the globe and forces that turn old
-                        friends into foes.
-                    </p>
-
-                    <!-- Additional Info -->
-                    <ul class="space-y-2 text-1lg mt-16">
-                        <li><span class="font-semibold">Genre:</span> Action, Crime</li>
-                        <li><span class="font-semibold">Date Release:</span> 2023</li>
-                        <li><span class="font-semibold">Production:</span> Chad Stahelski</li>
-                        <li><span class="font-semibold">Cast:</span> Bill Skarsgård, Clancy Brown, Donnie Yen, Ian
-                            McShane,
-                            Keanu Reeves, Lance Reddick, Laurence Fishburne</li>
-                        <li><span class="font-semibold">Country:</span> United States, Germany</li>
+<body class="bg-[#2D0505] text-white">
+    <header>
+        <nav class="bg-[#4A0909] border-gray-200">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center">
+                    <img src="../image/cinema.png" class="h-12" alt="Cinema Logo" />
+                </a>
+                <button data-collapse-toggle="navbar-menu" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:flex md:items-center md:w-auto" id="navbar-menu">
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 text-sm font-medium">
+                        <li><a href="#" class="block py-2 px-3 hover:bg-gray-700">Home</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:bg-gray-700">Now Playing</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:bg-gray-700">Watchlist</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:bg-gray-700">Category</a></li>
+                        <li><a href="#" class="block py-2 px-3 hover:bg-gray-700">Sign Out</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Cast title-->
-    <section>
-        <h1 class="text-4xl font-bold mb-4 text-white max-w-screen-xl mx-auto my-8 px-4 mt-16">Cast:</h1>
-    </section>
-    <!-- cast member -->
-    <section>
-        <div class="flex flex-wrap justify-center gap-8 max-w-screen-xl mx-auto my-8 px-4 mt-16  ">
-            <!-- cast member -->
-            <section>
-                <div class="flex flex-wrap justify-center gap-12 max-w-screen-xl mx-auto my-8 px-4 mt-0">
-                    <!-- Cast Member 1 -->
-                    <div class="text-center">
-                        <img src="../asset/1443_v9_bc.jpg" alt="Keanu Reeves"
-                            class="h-60 w-48 object-cover rounded-lg shadow-md">
-                        <p class="mt-2 text-white font-semibold">Keanu Reeves :</p>
-                        <p class="text-gray-300">John Wick</p>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Section -->
+        <section class="banner_section">
+            <div class="banner-main max-w-screen-xl mx-auto my-8 px-4">
+                <img src="../asset/banner.jpg" alt="Banner" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+        </section>
+
+        <!-- About Movie Section -->
+        <section>
+            <div class="about-movie max-w-screen-xl mx-auto my-8 px-4">
+                <div class="flex flex-wrap bg-[#2D0505] p-4 rounded-lg">
+                    <!-- Movie Poster -->
+                    <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                        <img src="../asset/jonh.webp" alt="John Wick: Chapter 4 Poster"
+                            class="w-full h-auto rounded-lg">
                     </div>
-                    <!-- Cast Member 2 -->
-                    <div class="text-center">
-                        <img src="../asset/Bill-Skarsgard-.png" alt="Bill Skarsgård"
-                            class="h-60 w-48 object-cover rounded-lg shadow-md">
-                        <p class="mt-2 text-white font-semibold">Bill Skarsgård :</p>
-                        <p class="text-gray-300">Marquis Vincent</p>
+
+                    <!-- Movie Details -->
+                    <div class="w-full md:w-2/3 p-6 md:pl-36">
+                        <!-- Title -->
+                        <h1 class="text-3xl md:text-4xl font-bold -mt-6 mb-4 max-w-screen-xl">
+                            John Wick: Chapter 4
+                        </h1>
+
+                        <!-- Tags and Info -->
+                        <div class="mt-6 md:mt-14 flex flex-wrap items-center gap-4">
+                            <!-- Tags -->
+                            <button type="button"
+                                class="px-4 md:px-5 py-2 text-xs md:text-sm font-medium text-white bg-red-900 rounded-xl">
+                                Action
+                            </button>
+                            <button type="button"
+                                class="px-4 md:px-5 py-2 text-xs md:text-sm font-medium text-white bg-red-900 rounded-xl">
+                                Crime
+                            </button>
+
+                            <!-- Trailer Button -->
+                            <a href="https://youtu.be/yjRHZEUamCc?si=bccV1D3Ku0Vh_wIt" target="_blank"
+                                rel="noopener noreferrer"
+                                class="px-4 md:px-5 py-2 text-xs md:text-sm font-medium text-white bg-red-900 rounded-xl inline-block text-center">
+                                Trailer
+                            </a>
+
+                            <!-- Additional Info -->
+                            <span class="text-xs md:text-sm flex items-center">
+                                <i class="fa-regular fa-calendar-days mr-2"></i>2023
+                            </span>
+                            <span class="text-xs md:text-sm flex items-center">
+                                <i class="fa-regular fa-clock mr-2"></i>2h:49mn
+                            </span>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-sm md:text-lg mt-6 md:mt-8 leading-relaxed">
+                            With the price on his head ever increasing, John Wick uncovers a path to defeating
+                            The High Table. But before he can earn his freedom, Wick must face off against a
+                            new enemy with powerful alliances across the globe and forces that turn old
+                            friends into foes.
+                        </p>
+
+                        <!-- Additional Info List -->
+                        <ul class="space-y-2 text-sm md:text-lg mt-8 md:mt-16">
+                            <li><span class="font-semibold">Genre:</span> Action, Crime</li>
+                            <li><span class="font-semibold">Date Release:</span> 2023</li>
+                            <li><span class="font-semibold">Production:</span> Chad Stahelski</li>
+                            <li><span class="font-semibold">Cast:</span> Bill Skarsgård, Clancy Brown, Donnie Yen, Ian
+                                McShane,
+                                Keanu Reeves, Lance Reddick, Laurence Fishburne</li>
+                            <li><span class="font-semibold">Country:</span> United States, Germany</li>
+                        </ul>
                     </div>
-                    <!-- Cast Member 3 -->
-                    <div class="text-center">
-                        <img src="../asset/MV5BMTUxODY3NjAzMF5BMl5BanBnXkFtZTcwMTQ5MjYwNg@@._V1_.jpg" alt="Clancy Brown"
-                            class="h-60 w-48 object-cover rounded-lg shadow-md">
-                        <p class="mt-2 text-white font-semibold">Clancy Brown :</p>
-                        <p class="text-gray-300">Harbinger</p>
-                    </div>
-                    <!-- Cast Member 4 -->
-                    <div class="text-center">
-                        <img src="../asset/72374_v9_bc.jpg" alt="Donnie Yen"
-                            class="h-60 w-48 object-cover rounded-lg shadow-md">
-                        <p class="mt-2 text-white font-semibold">Donnie Yen :</p>
-                        <p class="text-gray-300">Caine</p>
-                    </div>
-                    <!-- Cast Member 5 -->
-                    <div class="text-center">
-                        <img src="../asset/Rina-Sawayama.jpg" alt="Rina Sawayama"
-                            class="h-60 w-48 object-cover rounded-lg shadow-md">
-                        <p class="mt-2 text-white font-semibold">Rina Sawayama :</p>
-                        <p class="text-gray-300">Akira</p>
-                    </div>
+
                 </div>
-            </section>
-    </section>
-    <!-- comment -->
-    <section>
-        
-    </section>
+            </div>
+        </section>
+    </main>
 </body>
 
+</html>
 
+<!-- Cast title-->
+<section>
+    <h2 class="text-4xl font-bold mb-4 text-white max-w-screen-xl mx-auto my-8 px-4 mt-16">Cast:</h2>
+</section>
+<!-- cast member -->
+<section>
+    <div class="flex flex-wrap justify-center gap-8 max-w-screen-xl mx-auto my-8 px-4 mt-16  ">
+        <!-- cast member -->
+        <section>
+            <div class="flex flex-wrap justify-center gap-12 max-w-screen-xl mx-auto my-8 px-4 mt-0">
+                <!-- Cast Member 1 -->
+                <div class="text-center">
+                    <img src="../asset/1443_v9_bc.jpg" alt="Keanu Reeves"
+                        class="h-60 w-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-white font-semibold">Keanu Reeves :</p>
+                    <p class="text-gray-300">John Wick</p>
+                </div>
+                <!-- Cast Member 2 -->
+                <div class="text-center">
+                    <img src="../asset/Bill-Skarsgard-.png" alt="Bill Skarsgård"
+                        class="h-60 w-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-white font-semibold">Bill Skarsgård :</p>
+                    <p class="text-gray-300">Marquis Vincent</p>
+                </div>
+                <!-- Cast Member 3 -->
+                <div class="text-center">
+                    <img src="../asset/MV5BMTUxODY3NjAzMF5BMl5BanBnXkFtZTcwMTQ5MjYwNg@@._V1_.jpg" alt="Clancy Brown"
+                        class="h-60 w-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-white font-semibold">Clancy Brown :</p>
+                    <p class="text-gray-300">Harbinger</p>
+                </div>
+                <!-- Cast Member 4 -->
+                <div class="text-center">
+                    <img src="../asset/72374_v9_bc.jpg" alt="Donnie Yen"
+                        class="h-60 w-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-white font-semibold">Donnie Yen :</p>
+                    <p class="text-gray-300">Caine</p>
+                </div>
+                <!-- Cast Member 5 -->
+                <div class="text-center">
+                    <img src="../asset/Rina-Sawayama.jpg" alt="Rina Sawayama"
+                        class="h-60 w-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-white font-semibold">Rina Sawayama :</p>
+                    <p class="text-gray-300">Akira</p>
+                </div>
+            </div>
+        </section>
+</section>
+
+<!-- comment section-->
+<section>
+    <h2 class="text-4xl font-bold mb-4 text-white max-w-screen-xl mx-auto my-8 px-4 mt-16">Comment:</h2>
+    <div class="max-w-screen-xl mx-auto my-8 px-4 p-5 mb-4  ">
+        <time class="text-lg font-semibold text-gray-900 dark:text-white">January 13th, 2022</time>
+        <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user1.jpg"
+                        alt="Jese Leos image" />
+                    <div class="text-gray-600 dark:text-gray-400">
+                        <div class="text-base font-normal"><span class="font-medium text-gray-900 dark:text-white">Jese
+                                Leos</div>
+                        <div>
+
+                            <textarea id="message" rows="2"
+                                class="block p-2.5 w-[600px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Write your thoughts here..."></textarea>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user4.jpg"
+                        alt="Bonnie Green image" />
+                    <div>
+                        <div class="text-base font-normal text-gray-600 dark:text-gray-400"><span
+                                class="font-medium text-gray-900 dark:text-white">Bonnie Green</span> react to
+                            <span class="font-medium text-gray-900 dark:text-white">Thomas Lean's</span> comment
+                        </div>
+                        <div class="space-x-10">
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                10
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-down"></i>
+
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                Reply
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </div>
+    <div class="max-w-screen-xl mx-auto my-8 px-4 p-5">
+        <time class="text-lg font-semibold text-gray-900 dark:text-white">January 12th, 2022</time>
+        <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user2.jpg"
+                        alt="Laura Romeros image" />
+                    <div class="text-gray-600 dark:text-gray-400">
+                        <div class="text-base font-normal"><span class="font-medium text-gray-900 dark:text-white">Laura
+                                Romeros</div>
+                        <div class="text-sm font-normal">"I wanted to share a webinar zeroheight."</div>
+                        <div class="space-x-10">
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                10
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-down"></i>
+
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                Reply
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user3.jpg"
+                        alt="Mike Willi image" />
+                    <div>
+                        <div class="text-base font-normal text-gray-600 dark:text-gray-400"><span
+                                class="font-medium text-gray-900 dark:text-white">Mike Willi</div>
+                        <div class="space-x-10">
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                10
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-down"></i>
+
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                Reply
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user5.jpg"
+                        alt="Jese Leos image" />
+                    <div class="text-gray-600 dark:text-gray-400">
+                        <div class="text-base font-normal"><span class="font-medium text-gray-900 dark:text-white">Jese
+                                Leos</div>
+                        <div class="text-sm font-normal">"I wanted to share a webinar zeroheight."</div>
+                        <div class="space-x-10">
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                10
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-down"></i>
+
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                Reply
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <img class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0" src="../image/user7.jpg"
+                        alt="Bonnie Green image" />
+                    <div class="text-gray-600 dark:text-gray-400">
+                        <div class="text-base font-normal"><span
+                                class="font-medium text-gray-900 dark:text-white">Bonnie Green</div>
+                        <div class="text-sm font-normal">"I wanted to share a webinar zeroheight."</div>
+                        <div class="space-x-10">
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                10
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                <i class="fa-solid fa-thumbs-down"></i>
+                            </span>
+                            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                                Reply
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+</main>
+
+<!-- fotter -->
+<footer class="px-4 divide-y bg-[#4A0909]  text-gray-100 ">
+    <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+        <div class="lg:w-1/3">
+            <a rel="noopener noreferrer" href="#"
+                class="flex flex-col p-[20px]  mr-[20px] justify-center space-x-3 lg:justify-start ">
+                <img src="../image/cinema.png" class="flex-shrink-0 w-[100px] h-[100px]" alt="">
+                <span>Clarity gives you the blocks and components you need to create a truly professional
+                    website.</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 sm:text-center lg:text-left ">
+            <div class="space-y-3">
+                <h3 class="tracking-wide uppercase text-white text-[18px] Roboto">Company</h3>
+                <ul class="space-y-4">
+                    <li class="my-[10px]">
+                        <a rel="noopener noreferrer " href="#">About</a>
+                    </li>
+                    <li class="my-[10px]">
+                        <a rel="noopener noreferrer" href="#">Features</a>
+                    </li>
+                    <li class="my-[10px]">
+                        <a rel="noopener noreferrer" href="#">Works</a>
+                    </li>
+                    <li class="my-[10px]">
+                        <a rel="noopener noreferrer" href="#">Career</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h3 class="tracking-wide uppercase text-white text-[18px] Roboto">Help</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Customer Support</a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Delivery Details</a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-1">
+                <h3 class="uppercase text-white text-[18px] Roboto lg:text-left sm:text-center">Newsletter</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <button class="bg-white text-black px-[15px] py-[10px] rounded-[10px]  mt-[10px]">Enter your
+                            email address</button>
+                    </li>
+                    <li>
+                        <button class="bg-white text-black px-[45px] py-[10px] rounded-[10px]   ">Subscribe
+                            Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="py-6 text-[14px] text-center text-white ">&copy; Copyright 2025. All Rights Reserved by Cineverse
+    </div>
+</footer>
+</body>
 
 </html>
